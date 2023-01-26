@@ -1,0 +1,6 @@
+{
+    "JWT_SECRET": "HFIUSHFW9HJJHUJCXBJICUDUJDSBMJ8KHIDI4DSJDIUHKHDU",
+    "SMPT_SERVICE": "gmail",
+    "SMPT_MAIL": "aditya.18511@sscbs.du.ac.in",
+    "SMPT_PASSWORD": "Paditya@1999"
+}
