@@ -1,0 +1,96 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 14vmax;
+    justify-content: center;
+    text-align: center;
+    color: rgb(48, 46, 46);
+    transition: all 0.2s;
+    text-decoration: none;
+    margin: 5px;
+}
+Card.Title{
+    text-decoration: none;
+}
+.cardimage{
+    padding: 6px;
+    width: 14vmax;
+    height: 14vmax;
+}
+
+.stars{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.1vmax;
+    align-items: center;
+
+}
+.stars>span{
+    text-decoration: none;
+    font: 8px 0.5vmax 'Roboto';
+    margin: 0.1vmax;
+    padding-left: 3px;
+}
+
+.card:hover{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(15,15,15,0.26);
+    transform: translateY(-1vmax);
+}
+
+.pricespan{
+    font-size: 1.2vmax;
+    color: tomato;
+    
+}
+
+.buybtn{
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: auto;
+        height: 80vmax;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: rgb(48, 46, 46);
+        transition: all 0.2s;
+       
+        
+    }
+    
+    .cardimage{
+        padding: 2px;
+        width: 1vmax;
+        height: 26vmax;
+    }
+    .stars{
+        display: flex;
+        justify-content: flex-start;
+        margin: 0.5vmax;
+        align-items: center;
+    
+    }
+    .stars>span{
+        font: 14px 'Roboto';
+        margin: 0.1vmax;
+        padding-left: 5px;
+    }
+    .pricespan{
+        font-size: 2.8vmax;
+        color: tomato;
+        
+    }
+    .buybtn{
+        margin-top: 8px;
+        width: fit-content;
+    }
+}
