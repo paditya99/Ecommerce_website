@@ -31,7 +31,7 @@ const Product = ({product, tshirt}) => {
 
 
     // </Link>
-    <Link to={product._id}>
+    <Link to={`products/${product._id}`}>
     <Card className="card">
       <Card.Img variant="top" src={product.images[0].url} className="cardimage"/>
       <Card.Body>

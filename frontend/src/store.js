@@ -3,9 +3,11 @@ import { legacy_createStore, applyMiddleware, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension'
 import { productReducers } from './reducers/productReducers';
+import { productDetailsReducers } from './reducers/productReducers';
 
 const RootReducer=combineReducers({
-    products: productReducers
+    products: productReducers,
+    productDetails: productDetailsReducers
 })
 
 let initialState={

@@ -16,7 +16,8 @@ const ApiFeatures=require('../utils/apiFeatures');
 const ErrorHandler = require("../utils/errorHandler");
 
 //Get all products
-const getAllProducts=catchAsyncErrors(async(req,res)=>{
+const getAllProducts=catchAsyncErrors(async(req,res,next)=>{
+    
     const resultsPerPage=8;
     const productsCount=await productModel.countDocuments();
     const apifeature=new ApiFeatures(productModel.find(),req.query).search().filter().pagination(resultsPerPage);

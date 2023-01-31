@@ -1,3 +1,104 @@
+.menuicon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    fill:rgba(25, 24, 24, 0.8);
+    background-color: rgba(255, 255, 255, 0.847);
+    border-radius: 20%;
+}
+.menuicon:hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    fill:rgba(25, 24, 24, 0.8);
+    background-color: rgb(255, 255, 255);
+    border-radius: 30%;
+}
+#offcanvas{
+    width: 20vmax;
+    
+}
+
+.fragment{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    margin: 2px;
+    text-decoration: none;
+}
+.fragment:hover{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: blueviolet;
+    padding: 10px;
+    margin: 2px;
+    color: white;
+    text-decoration: none;
+}
+.fragment:hover:nth-child(1) .link>a{
+    color: white;
+}
+.fragment:hover:nth-child(2) > .link>a{
+    color: white;
+}
+.fragment:hover:nth-child(3) > .link>a{
+    color: white;
+}
+.fragment:hover:nth-child(4) > .link>a{
+    color: white;
+}
+.fragment>.link>a{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+}
+/* .fragment>.link>a:hover:nth-child(1){
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: white;
+}
+.fragment>.link>a:hover:nth-child(2){
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: white;
+} */
+/* .hovered{
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+} */
+/* .nothovered{
+    color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+} */
+.fragment> .svgicon> svg{
+    fill:rgba(25, 24, 24, 0.8);
+    margin-right: 15px;
+    color: black;
+    width: 33px;
+    height: 33px;
+}
+
+.fragment:hover:nth-child(1) >.svgicon>svg{
+    fill: #FFFFFF;
+}
+.fragment:hover:nth-child(2) >.svgicon>svg{
+    fill: #FFFFFF;
+}
+.fragment:hover:nth-child(3) >.svgicon>svg{
+    fill: #FFFFFF;
+}
+.fragment:hover:nth-child(4) >.svgicon>svg{
+    fill: #FFFFFF;
+}
+
 .banner{
     display: flex;
     flex-direction: column;
@@ -80,6 +181,9 @@
     max-width: 100%;
 }
 @media (max-width: 480px) {
+    #offcanvas{
+        width: 40vmax;
+    }
     .banner{
         display: flex;
         flex-direction: column;
@@ -131,6 +235,21 @@
 }
 
 @media (max-width: 768px) {
+    #offcanvas{
+        width: 40vmax;
+    }
+    .menuicon{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 10px;
+        height: 40px;
+        width: 40px;
+        margin-left: 10px;
+        fill:rgba(25, 24, 24, 0.8);
+        background-color: rgba(255, 255, 255, 0.847);
+        border-radius: 20%;
+    }
     .banner{
         display: flex;
         flex-direction: column;
