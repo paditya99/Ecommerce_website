@@ -1,4 +1,4 @@
-.card{
+.maincard{
     display: flex;
     flex-direction: column;
     width: 14vmax;
@@ -32,7 +32,7 @@ Card.Title{
     padding-left: 3px;
 }
 
-.card:hover{
+.maincard:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,7 +52,7 @@ Card.Title{
 }
 
 @media (max-width: 768px) {
-    .card{
+    .maincard{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;

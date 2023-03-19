@@ -9,7 +9,7 @@ import ReactStars from 'react-rating-stars-component'
 
 
 
-const Product = ({product, tshirt}) => {
+const ProductCard = ({product}) => {
   const options={
     edit: false,
     value: product.ratings,
@@ -31,8 +31,8 @@ const Product = ({product, tshirt}) => {
 
 
     // </Link>
-    <Link to={`products/${product._id}`}>
-    <Card className="card">
+    <Link to={`/products/${product._id}`}>
+    <Card className="maincard">
       <Card.Img variant="top" src={product.images[0].url} className="cardimage"/>
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
@@ -52,4 +52,4 @@ const Product = ({product, tshirt}) => {
   )
 }
 
-export default Product
+export default ProductCard

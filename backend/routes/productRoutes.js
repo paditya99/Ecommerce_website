@@ -18,14 +18,15 @@ const ErrorHandler = require("../utils/errorHandler");
 //Get all products
 const getAllProducts=catchAsyncErrors(async(req,res,next)=>{
     
-    const resultsPerPage=8;
+    const resultsPerPage=3;
     const productsCount=await productModel.countDocuments();
     const apifeature=new ApiFeatures(productModel.find(),req.query).search().filter().pagination(resultsPerPage);
     const allproducts=await apifeature.query;
     res.status(200).json({
         success: true,
         allproducts,
-        productsCount
+        productsCount,
+        resultsPerPage
     })
 })
 
@@ -68,15 +69,14 @@ const deleteProduct = catchAsyncErrors(async(req, res) => {
 })
 
 //Get a product details
-const getProductdetail=catchAsyncErrors(async(req,res)=>{
+const getProductdetail=catchAsyncErrors(async(req,res,next)=>{
     const product = await productModel.findById(req.params.id);
     if(!product){
         return next(new ErrorHandler("Product Not Found", 404));
     }
     res.status(200).json({
         success: true,
-        product,
-        productsCount
+        product
     })
 })
 
@@ -160,7 +160,7 @@ const deleteReviews=catchAsyncErrors(async(req,res,next)=>{
 
 router.route('/products').get(getAllProducts);
 router.route('/products/new').post(isAuthenticatedUser,authorizeRoles("admin"),createProduct);
-router.route('/products/:id').put(isAuthenticatedUser,authorizeRoles("admin"),updateProduct).delete(isAuthenticatedUser,authorizeRoles("admin"),deleteProduct).get(isAuthenticatedUser,authorizeRoles("admin"),getProductdetail);
+router.route('/products/:id').put(isAuthenticatedUser,authorizeRoles("admin"),updateProduct).delete(isAuthenticatedUser,authorizeRoles("admin"),deleteProduct).get(getProductdetail);
 router.route('/review').put(isAuthenticatedUser,createProductReviews);
 router.route('/allreview').get(getProductReviews);
 router.route('/deletereview').delete(isAuthenticatedUser,deleteReviews)

@@ -1,31 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { FaBeer } from "react-icons/fa";
 import "../Home/Home.css";
-import Product from "./Product";
-import Button from "react-bootstrap/Button";
+import ProductCard from "./ProductCard";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import Nav from "react-bootstrap/Nav";
-import { Link, NavLink } from "react-router-dom";
-import tshirt from "../../images/tshirt.jpg";
 import MetaData from "../layout/MetaData";
-import { getproducts } from "../../actions/productActions";
+import { clearErrors, getproducts } from "../../actions/productActions";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../layout/Loader";
 import { useAlert } from "react-alert";
-import ListGroup from "react-bootstrap/ListGroup";
-import { AiFillHome } from "react-icons/ai";
-const icon = (
-  <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
-    <path d="M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z" />
-  </svg>
-);
+import Search from "../Product/Search";
+
+
 const Home = () => {
   const alert = useAlert();
   const dispatch = useDispatch();
   const { loading, allproducts, error, productsCount } = useSelector(
     (state) => state.products
   );
-  const temp = document.querySelector(".fragment");
+  
 
   const [show, setShow] = useState(false);
 
@@ -33,11 +24,12 @@ const Home = () => {
   const handleShow = () => setShow(true);
 
   useEffect(() => {
-    if (error) {
-      return alert.error(error);
+    if(error){
+      alert.error(error);
+      dispatch(clearErrors());
     }
     dispatch(getproducts());
-  }, [dispatch, error]);
+  }, [dispatch, error, alert]); 
 
   return (
     <>
@@ -46,7 +38,7 @@ const Home = () => {
       ) : (
         <>
           <MetaData title="ECO-CART"></MetaData>
-
+          
           <div className="banner">
             <svg
               className="menuicon"
@@ -60,7 +52,7 @@ const Home = () => {
               <path d="M0 0h24v24H0z" fill="none" />
               <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
             </svg>
-
+            <Search></Search>
             <p>Welcome to ECO-CART</p>
             <h1>Find Amazing products here.</h1>
             <a href="#container1">
@@ -111,7 +103,7 @@ const Home = () => {
                 </div>
 
                 <div className="link">
-                  <a href="/product">Product</a>
+                  <a href="/products">Product</a>
                 </div>
               </div>
 
@@ -160,7 +152,7 @@ const Home = () => {
             <div className="homeheading">Featured Products</div>
             <div className="container1" id="container1">
               {allproducts &&
-                allproducts.map((product) => <Product product={product} />)}
+                allproducts.map((product) => <ProductCard product={product} />)}
             </div>
           </div>
         </>
