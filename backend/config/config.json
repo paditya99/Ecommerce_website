@@ -1,6 +1,10 @@
 {
     "JWT_SECRET": "HFIUSHFW9HJJHUJCXBJICUDUJDSBMJ8KHIDI4DSJDIUHKHDU",
-    "SMPT_SERVICE": "gmail",
-    "SMPT_MAIL": "aditya.18511@sscbs.du.ac.in",
-    "SMPT_PASSWORD": "Paditya@1999"
+    "SMPT_SERVICE": "yahoo",
+    "SMPT_MAIL": "pathakaditya123@yahoo.com",
+    "SMPT_PASSWORD": "Mern@yahoo",
+    "CLOUD_NAME": "dzwgtdqvg",
+    "API_KEY": "759268313347482",
+    "API_SECRET": "Cz8FZN1MVP76EnKnyr0YWigYSpc"
+
 }

@@ -21,8 +21,8 @@ const Search = ({ history }) => {
         onSubmit={submitSearch}
       >
         <input type="text" placeholder="Search..." name="search2" onChange={e=>setKeyword(e.target.value)}/>
-        <button type="submit">
-          <i class="fa fa-search"></i>
+        <button type="submit" className="searchbtn">
+          <i className="fa fa-search"></i>
         </button>
       </form>
       

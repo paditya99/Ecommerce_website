@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Loader from "../layout/Loader";
 import { useAlert } from "react-alert";
 import Search from "../Product/Search";
-
+import Button from 'react-bootstrap/Button';
 
 const Home = () => {
   const alert = useAlert();
@@ -53,10 +53,11 @@ const Home = () => {
               <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
             </svg>
             <Search></Search>
+           <a className="loginbtn" href="/signup">SignUp</a>
             <p>Welcome to ECO-CART</p>
             <h1>Find Amazing products here.</h1>
             <a href="#container1">
-              <button>Scroll</button>
+              <button>Explore</button>
             </a>
           </div>
           <Offcanvas show={show} onHide={handleClose} id="offcanvas">

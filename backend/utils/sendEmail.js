@@ -3,8 +3,8 @@ const {SMPT_MAIL,SMPT_PASSWORD,SMPT_SERVICE}=require('../config/config.json');
 
 const sendEmail=async(options)=>{
     const transporter=nodeMailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 465,
+        host: "smtp.mail.yahoo.com",
+        port: 587,
         service: SMPT_SERVICE,
         auth: {
             user: SMPT_MAIL,

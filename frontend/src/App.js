@@ -9,6 +9,9 @@ import ProductDetails from './components/Product/ProductDetails';
 import Sidebar from './components/layout/Header/Sidebar';
 import Products from './components/Product/Products';
 import Search from './components/Product/Search';
+import Login from './components/Users/Login';
+import Register from './components/Users/Register';
+
 
 function App() {
 
@@ -32,10 +35,12 @@ function App() {
       <Route path='/products' element={<Products></Products>}></Route>
       <Route path='/products/:word' element={<Products></Products>}></Route>
       <Route path='/search' element={<Search></Search>}></Route>
-      
+      <Route path='/login' element={<Login></Login>}></Route>
+      <Route path='/signup' element={<Register></Register>}></Route>
       </Routes>
         
       <Footer></Footer>
+      
     </Router>
     
   );
