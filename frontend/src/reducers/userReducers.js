@@ -1,16 +1,20 @@
-import {LOGIN_REQUEST,LOGIN_SUCCESS,LOGIN_FAILURE, REGISTER_REQUEST,REGISTER_SUCCESS,REGISTER_FAILURE, CLEAR_ERRORS } from "../constants/userConstants";
+import {LOGIN_REQUEST,LOGIN_SUCCESS,LOGIN_FAILURE, REGISTER_REQUEST,REGISTER_SUCCESS,REGISTER_FAILURE, CLEAR_ERRORS,
+    LOAD_USER_REQUEST,LOAD_USER_SUCCESS,LOAD_USER_FAILURE,LOGOUT_SUCCESS,LOGOUT_FAILURE
+} from "../constants/userConstants";
 
 export const userReducers=(state={user:{}},action)=>{
     switch(action.type) {
         case LOGIN_REQUEST: 
         case REGISTER_REQUEST:
+        case LOAD_USER_REQUEST:
         return{
             loading: true,
             isAuthenticated: false
         }
 
         case LOGIN_SUCCESS:
-        case REGISTER_SUCCESS:    
+        case REGISTER_SUCCESS:
+        case LOAD_USER_SUCCESS:    
         return{
             ...state,
             loading: false,
@@ -19,6 +23,13 @@ export const userReducers=(state={user:{}},action)=>{
             
             
         }
+
+        case LOGOUT_SUCCESS:
+         return{
+            loading: false,
+            isAuthenticated:false,
+            user: null
+         }
 
         case LOGIN_FAILURE: 
         case REGISTER_FAILURE:
@@ -29,6 +40,21 @@ export const userReducers=(state={user:{}},action)=>{
             user: null,
             error: action.payload
         }
+
+        case LOGOUT_FAILURE:
+            return{
+                ...state,
+                loading: false,
+                error: action.payload
+            }
+
+        case LOAD_USER_FAILURE:
+            return{
+                loading: false,
+                isAuthenticated: false,
+                user: null,
+            
+            }
 
         case CLEAR_ERRORS: return{
             ...state,

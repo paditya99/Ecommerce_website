@@ -107,7 +107,8 @@ const deleteOrder=catchAsyncErrors(async(req,res,next)=>{
     })
 })
 
-router.route('/order/new').post(isAuthenticatedUser,createOrder);
+// router.route('/order/new').post(isAuthenticatedUser,createOrder);
+router.route('/order/new').post(createOrder);
 router.route('/order/:id').get(isAuthenticatedUser,getSingleOrder);
 router.route('/order/me').get(getmyOrder);
 router.route('/admin/orders').get(isAuthenticatedUser,authorizeRoles("user"),getAllOrder);

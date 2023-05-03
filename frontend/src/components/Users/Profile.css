@@ -1,0 +1,41 @@
+.profile-head {
+    transform: translateY(6rem);
+    display: flex;
+}
+
+
+#coverid{
+    background-image: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+}
+.profile>a{
+    position: relative;
+    top: 5px;
+}
+.media-body{
+    margin: 20px;
+}
+.media-body>h4{
+    padding: 10px;
+}
+.media-body>p{
+    padding: 10px;
+}
+.py-3{
+    padding-top: 6rem!important;
+}
+#profilerow{
+    padding-top: 8rem!important;
+}
+.img-thumbnail{
+    width: 130px;
+    height: 150px;
+}
+#pxcover{
+    background: antiquewhite;
+}

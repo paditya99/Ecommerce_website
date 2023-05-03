@@ -22,8 +22,34 @@
     width: 20vmax;
     
 }
-
-.loginbtn{
+.avatarimg{
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+}
+.speedDial{
+    position: fixed;
+    right: 10px;
+    top: 70px;
+}
+#moreproductsbtn{
+    background-color: tomato;
+    color: white;
+    justify-content: center;
+    position: relative;
+    left: 35%;
+    width: 35%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+#moreproductsbtn:hover{
+    border: tomato;
+}
+.moresvg{
+    fill: white;
+    height: 27px;
+    width: 27px;
+}
+#loginbtn{
   cursor: pointer;
   position: absolute;
   top: 10px;
@@ -32,8 +58,8 @@
   border-radius: 4px;
   font-weight: 600;
   margin: 0 5px;
-  width: 100px;
-  padding: 10px 0;
+  width:fit-content;
+  padding: 10px;
   box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
   transition: 0.3s;
   color: blueviolet;
@@ -41,7 +67,7 @@
   border: 1px solid rgba(104, 85, 224, 1);
 
 }
-.loginbtn:hover{
+#loginbtn:hover{
     color: white;
     border: 1px solid rgb(255, 255, 255);
   box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
@@ -131,15 +157,17 @@
     text-align: center;
     height: 40vmax;
     justify-content: center;
-    background-color: blueviolet;
+    
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1650' height='600' preserveAspectRatio='none' viewBox='0 0 1650 600'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1111%26quot%3b)' fill='none'%3e%3crect width='1650' height='600' x='0' y='0' fill='rgba(138%2c 43%2c 226%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c620.019C120.17%2c606.861%2c245.407%2c605.412%2c345.704%2c537.926C445.024%2c471.097%2c499.628%2c359.774%2c548.908%2c250.678C598.013%2c141.97%2c654.714%2c26.086%2c629.58%2c-90.52C604.899%2c-205.023%2c490.051%2c-269.769%2c416.993%2c-361.326C340.076%2c-457.719%2c299.405%2c-588.43%2c188.782%2c-642.931C71.632%2c-700.648%2c-68.712%2c-697.5%2c-194.565%2c-662.626C-321.501%2c-627.452%2c-427.438%2c-544.599%2c-516.452%2c-447.509C-607.378%2c-348.334%2c-707.884%2c-236.436%2c-708.659%2c-101.89C-709.42%2c30.199%2c-572.649%2c116.34%2c-520.401%2c237.659C-466.459%2c362.912%2c-507.941%2c538.616%2c-398.041%2c619.364C-288.909%2c699.548%2c-134.618%2c634.759%2c0%2c620.019' fill='%236f1abd'%3e%3c/path%3e%3cpath d='M1650 1381.402C1795.503 1400.286 1951.203 1332.2930000000001 2052.244 1225.905 2147.425 1125.687 2135.862 970.905 2167.619 836.389 2192.823 729.629 2204.965 626.892 2219.333 518.142 2239.743 363.66200000000003 2365.057 186.255 2269.811 62.93100000000004 2176.4120000000003-58.000999999999976 1971.162 48.565000000000055 1824.243 6.581999999999994 1678.976-34.928 1570.318-203.192 1421.091-179.59299999999996 1272.624-156.11400000000003 1166.018-12.442000000000007 1097.749 121.47199999999998 1036.579 241.462 1085.7730000000001 382.80899999999997 1066.433 516.096 1047.058 649.626 934.459 778.637 984.196 904.063 1033.855 1029.291 1200.205 1051.039 1309.69 1129.533 1426.756 1213.462 1507.155 1362.863 1650 1381.402' fill='%23a45ae9'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1111'%3e%3crect width='1650' height='600' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
     color: white;
 }
 .banner::after{
     content: "";
     clip-path: polygon(100% 77%, 0% 100%, 100% 100%);
     width: 100%;
+    
     height: 40vmax;
-    background-color: white;
+    background-image: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     top: 0px;
     left: 0px;
     position: absolute;
@@ -262,7 +290,10 @@
     }
 }
 .pagenav{
-    background-color: #8a2be2;
+    padding-left: 10px;
+    padding-right: 20px;
+    background-color: #000000;
+    color: white;
 }
 
 @media (max-width: 768px) {

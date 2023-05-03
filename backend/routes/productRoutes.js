@@ -18,7 +18,7 @@ const ErrorHandler = require("../utils/errorHandler");
 //Get all products
 const getAllProducts=catchAsyncErrors(async(req,res,next)=>{
     
-    const resultsPerPage=5;
+    const resultsPerPage=6;
     const productsCount=await productModel.countDocuments();
     const apifeature=new ApiFeatures(productModel.find(),req.query).search().filter().pagination(resultsPerPage);
     const allproducts=await apifeature.query;
@@ -159,7 +159,7 @@ const deleteReviews=catchAsyncErrors(async(req,res,next)=>{
 
 
 router.route('/products').get(getAllProducts);
-router.route('/products/new').post(isAuthenticatedUser,authorizeRoles("admin"),createProduct);
+router.route('/products/new').post(isAuthenticatedUser,authorizeRoles("user"),createProduct);
 router.route('/products/:id').put(isAuthenticatedUser,authorizeRoles("admin"),updateProduct).delete(isAuthenticatedUser,authorizeRoles("admin"),deleteProduct).get(getProductdetail);
 router.route('/review').put(isAuthenticatedUser,createProductReviews);
 router.route('/allreview').get(getProductReviews);

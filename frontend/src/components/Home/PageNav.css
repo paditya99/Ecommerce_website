@@ -1,0 +1,28 @@
+.logo>svg{
+    height: 32px;
+    width: 32px;
+    margin: 0px 5px 5px 5px;
+    fill: rgb(255, 255, 255);
+}
+/* .logo>svg:hover{
+    
+    fill: tomato;
+} */
+.logoname{
+    
+    color: rgb(255, 255, 255);
+}
+
+#searchbtn{
+    background-color: tomato;
+    color: rgb(255, 255, 255);
+}
+#links{
+    color: rgb(215, 215, 215);
+}
+#links:hover{
+    color: tomato;
+}
+#links:active{
+    color: yellow;
+}

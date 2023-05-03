@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Search.css";
 import { useParams } from "react-router-dom";
 import Products from "./Products";
-const Search = ({ history }) => {
+const Search = () => {
 
   const navigate = useNavigate();
   const [word, setKeyword] = useState("");

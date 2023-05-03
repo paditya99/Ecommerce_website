@@ -5,6 +5,7 @@
     "SMPT_PASSWORD": "Mern@yahoo",
     "CLOUD_NAME": "dzwgtdqvg",
     "API_KEY": "759268313347482",
-    "API_SECRET": "Cz8FZN1MVP76EnKnyr0YWigYSpc"
+    "API_SECRET": "Cz8FZN1MVP76EnKnyr0YWigYSpc",
+    "MONGO_URI": "mongodb+srv://adityapathak63635:ecommerce@cluster0.5wxeb2c.mongodb.net/?retryWrites=true&w=majority"
 
 }

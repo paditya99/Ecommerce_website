@@ -1,5 +1,6 @@
 .maincard{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     width: 14vmax;
     justify-content: center;

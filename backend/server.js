@@ -4,7 +4,7 @@ const dotenv=require('dotenv');
 const connection = require('./config/database');
 const cloudinary=require("cloudinary");
 
-const {CLOUD_NAME, API_KEY,API_SECRET}=require('../backend/config');
+const {CLOUD_NAME, API_KEY,API_SECRET}=require('./config/config.json');
 //dotenv.config({path: 'backend/config/config.env'});
 //dotenv.config();
 const port=4000
