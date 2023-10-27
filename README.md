@@ -10,13 +10,17 @@ The **MERN E-Commerce Website** is a modern and robust online shopping platform 
 
 - **Search Functionality:** Users can search for products using keywords.
 
+- **Filter Products:** Users can filter the products based on the categories, price and rated stars.
+
 - **Shopping Cart:** An intuitive shopping cart that allows users to add, modify, and remove products before making a purchase.
 
 - **Checkout Process:** A streamlined checkout process with multiple payment options, making it easy for users to complete their orders.
 
 - **User Profiles:** User profiles that store order history, shipping details, and other personalized information.
 
-- **Admin Panel:** An admin panel for product management, order tracking, and user management.
+- **Help Section:** Users can send their messages to the admin in the help section via contact form.
+
+<!-- **Admin Panel:** An admin panel for product management, order tracking, and user management. -->
 
 <!-- **Payment Integration:** Seamless integration with popular payment gateways such as PayPal and Stripe, ensuring secure transactions. -->
 
